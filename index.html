@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="Formal.jpeg" width="4%" height="4%" class="gambar"/>
+        <h1>Profil Mahasiswa</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+            <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+            <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+            <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+        </ul>
+    </nav>
+
+    <section id="Content">
+    <div id="biodata">
+        <h2>Biodata</h2>
+        <p><strong>NIM:</strong> 2023081065</p>
+        <p><strong>Nama:</strong> Satria Muhammad Putra Wibowo</p>
+        <p><strong>Agama:</strong> Islam</p>
+        <p><strong>Tanggal Lahir:</strong> 8 - Februari - 2004</p>
+        <p><strong>Tempat Lahir:</strong> Jakarta</p>
+    </div>
+    <div id="pendidikan" style="display:none;">
+        <h2>Pendidikan</h2>
+        <p><strong>SD:</strong> Cendra Wasih III</p>
+        <p><strong>Smp:</strong> SMPN 12 Tanggerang Selatan</p>
+        <p><strong>Sma:</strong> SMAN 108 Jakarta</p>
+        <p><strong>Kuliah:</strong> UPJ</p>
+    </div>
+    <div id="pengalaman" style="display:none;">
+        <h2>Pengalaman</h2>
+        <p>Berorganisasi, mendesain, memrogram</p>
+    </div>
+    <div id="keahlian" style="display:none;">
+        <h2>Keahlian</h2>
+        <p>Desain, Video Editing</p>
+    </div>
+    </section>
+
+    <aside>
+        <h2>Hobi</h2>
+        <ul>
+            <li>Otomotif</li>
+            <li>Bermain Bola</li>
+            <li>Gaming</li>
+            <li>Pemrograman</li>
+            <li>Editinng</li>
+            <li>Desain</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <div class="footer-left">
+            <p>Twitter: @RIOZ</p>
+            <p>FB: @RIOS</p>
+            <p>Instagram: @Nest_forstbite</p>
+        </div>
+        <div class="footer-center">
+            <p>&copy; Copyright 2020. All Rights Reserved</p>
+        </div>
+        <div class="footer-right">
+            <p>Nama Web</p>
+            <p>Biodata Satria</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            document.getElementById('biodata').style.display = 'none';
+            document.getElementById('pendidikan').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('keahlian').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

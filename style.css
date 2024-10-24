@@ -1,0 +1,186 @@
+/* Global Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+    background-color: #f9fafb;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #007BFF; /* Warna biru untuk header */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-bottom: 4px solid #0056b3; /* Biru gelap untuk border */
+}
+
+header .gambar {
+    margin-left: 10px;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+/* Navigation */
+nav {
+    float: left;
+    width: 20%; /* Kurangi lebar nav agar lebih adaptif */
+    background-color: #e9ecef; /* Warna abu muda */
+    padding: 20px;
+    height: calc(100vh - 140px); 
+    border-right: 1px solid #ccc;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Warna link biru */
+    display: block;
+    padding: 10px;
+    background-color: #ffffff; /* Latar belakang putih */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f1f1f1; /* Warna hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section */
+section {
+    float: left;
+    width: 55%; /* Kurangi lebar section untuk menyesuaikan dengan nav */
+    padding: 20px;
+    height: calc(100vh - 140px);
+    background-color: #ffffff; /* Latar belakang putih */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+/* Aside */
+aside {
+    float: left;
+    width: 25%; /* Pertahankan lebar aside */
+    background-color: #f8f9fa; /* Warna abu yang lebih terang */
+    padding: 20px;
+    height: calc(100vh - 140px);
+    border-left: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+
+/* Footer */
+footer {
+    clear: both;
+    background-color: #007BFF; /* Warna biru yang sama seperti header */
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left, .footer-right {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-center {
+    flex: 1;
+    text-align: center;
+}
+
+/* Responsive: Smartphone */
+@media (max-width: 600px) {
+    nav, aside, section {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Responsive: Tablet Landscape */
+@media (max-width: 1200px) and (orientation: landscape) {
+    nav {
+        width: 30%; /* Sesuaikan untuk landscape */
+        float: left;
+        height: auto;
+    }
+
+    section {
+        width: 70%; /* Sesuaikan untuk landscape */
+        float: left;
+        padding: 20px;
+        height: auto;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Responsive: Tablet Portrait */
+@media (max-width: 900px) and (orientation: portrait) {
+    nav, section, aside {
+        width: 100%; /* Sesuaikan dengan lebar penuh untuk portrait */
+        float: none;
+        height: auto;
+    }
+
+    section {
+        padding: 20px; /* Sesuaikan padding agar tetap rapi */
+    }
+
+    aside {
+        margin-top: 20px; /* Beri jarak antara section dan aside */
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
